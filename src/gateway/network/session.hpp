@@ -5,10 +5,7 @@
 namespace asio = boost::asio;
 using tcp = asio::ip::tcp;
 
-class Session : public std::enable_shared_from_this<Session> {
-    private:
-        tcp::socket socket_;
-        char buf_[1024];    
+class Session : public std::enable_shared_from_this<Session> {   
     public:
         explicit Session(tcp::socket socket) : socket_(std::move(socket)) {}
         void start() {
@@ -42,4 +39,7 @@ class Session : public std::enable_shared_from_this<Session> {
                 }
             );
         }
+        private:
+            tcp::socket socket_;
+            char buf_[1024]; 
 };

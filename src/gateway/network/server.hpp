@@ -6,10 +6,7 @@
 namespace asio = boost::asio;
 using tcp = asio::ip::tcp;
 
-namespace gateway::network {
 class Server {
-    private:
-        tcp::acceptor acceptor_;
     public:
         Server(asio::io_context& io_context, short port) 
         : acceptor_(io_context, tcp::endpoint(tcp::v4(), port)) {
@@ -26,5 +23,6 @@ class Server {
                 }
             );
         }
+    private:
+        tcp::acceptor acceptor_;
 };
-}
