@@ -26,15 +26,6 @@ API_GATEWAY_SOURCE_DIR:STATIC=/Users/andrey/Documents/api-gateway
 //The directory containing a CMake configuration file for Boost.
 Boost_DIR:PATH=/opt/homebrew/lib/cmake/Boost-1.90.0
 
-//Path to a file.
-Boost_INCLUDE_DIR:PATH=/opt/homebrew/include
-
-//Boost system library (debug)
-Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=Boost_SYSTEM_LIBRARY_DEBUG-NOTFOUND
-
-//Boost system library (release)
-Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=Boost_SYSTEM_LIBRARY_RELEASE-NOTFOUND
-
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
@@ -248,10 +239,6 @@ boost_system_DIR:PATH=boost_system_DIR-NOTFOUND
 # INTERNAL cache entries
 ########################
 
-//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
-Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
-Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR

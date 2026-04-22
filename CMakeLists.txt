@@ -17,7 +17,7 @@ set(Boost_ROOT "/opt/homebrew")
 set(Boost_NO_BOOST_CMAKE ON) # Это критично для версии 1.90.0
 
 # 3. ПОИСК (Добавили флаг QUIET, чтобы не спамить, если не нашли сразу)
-find_package(Boost REQUIRED COMPONENTS system)
+find_package(Boost REQUIRED COMPONENTS)
 
 # 4. ПРОВЕРКА ДЛЯ ТЕБЯ
 message(STATUS "--- DEBUG INFO ---")
@@ -25,7 +25,7 @@ message(STATUS "Boost include dirs: ${Boost_INCLUDE_DIRS}")
 message(STATUS "Boost libraries: ${Boost_LIBRARIES}")
 
 add_executable(gateway 
-    src/main.cpp 
+    src/main.cpp
 )
 
 target_include_directories(gateway PRIVATE 
